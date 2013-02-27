@@ -1,7 +1,6 @@
 import "classes/*.pp"
-$site_domain = "budget.local"
+$site_domain = "site.local"
 $mysql_password = "root"
-$mysql_database = "vagrant"
 
 group { "puppet":
   ensure => "present",
