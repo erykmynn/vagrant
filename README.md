@@ -12,6 +12,6 @@ This is intended to be included as a submodule in another project, providing a s
 4. Put an example html file into the document root `echo "<h1>Hello World!</h1>" > site/index.html`
 5. Run the installation script `./install.sh`
 
-The installation script will attempt to update the hosts file so that site.local will resolve to 33.33.33.36 (the IP of the VM).
+The installation script will attempt to update the hosts file so that site.local will resolve to 33.33.33.66 (the IP of the VM).
 
 Open a browser and hit the new website: http://site.local
