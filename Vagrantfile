@@ -21,7 +21,7 @@ Vagrant::Config.run do |config|
   # via the IP. Host-only networks can talk to the host machine as well as
   # any other machines on the same network, but cannot be accessed (through this
   # network interface) by any external networks.
-  config.vm.network :hostonly, "33.33.33.66"
+  config.vm.network :hostonly, "3.3.3.6"
 
   # Assign this VM to a bridged network, allowing you to connect directly to a
   # network using the host's network device. This makes the VM appear as another
@@ -37,7 +37,7 @@ Vagrant::Config.run do |config|
   # folder, and the third is the path on the host to the actual folder.
   config.vm.share_folder 'templates', '/tmp/vagrant-puppet/templates', 'puppet/templates'
   config.vm.share_folder 'sshkeys', '/home/vagrant/.ssh', '~/.ssh'
-  config.vm.share_folder 'www', '/var/www/site.local', '../public_html', :group => "www-data", :extra => 'dmode=775'
+  config.vm.share_folder 'www', '/var/www/local.testingthis.com', '../public_html', :group => "www-data", :extra => 'dmode=775'
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.
