@@ -12,6 +12,26 @@ This is intended to be included as a submodule in another project, providing a s
 4. Put an example html file into the document root `echo "<h1>Hello World!</h1>" > site/index.html`
 5. Run the installation script `cd vagrant && ./install.sh`
 
-The installation script will attempt to update the hosts file so that site.local will resolve to 33.33.33.66 (the IP of the VM).
+### Using ###
+
+The installation script will attempt to update the hosts file so that site.local
+will resolve to 33.33.33.66 (the IP of the VM).
 
 Open a browser and hit the new website: http://site.local
+
+#### Database management ####
+
+SequelPro may be used to access the mysql server inside vagrant:
+
+ * Use the key located at : ~/.vagrant.d/insecure_private_key
+ * Configure the ip address to : 33.33.33.66
+
+#### Normal ssh ####
+
+A normal ssh session can be invoked with the following commands:
+
+```
+PORT=`vagrant ssh-config | grep Port | grep -o '[0-9]\+'`
+chmod 600 ~/.vagrant.d/insecure_private_key
+ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.vagrant.d/insecure_private_key vagrant@localhost -p $PORT
+```
