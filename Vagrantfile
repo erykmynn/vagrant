@@ -36,7 +36,7 @@ Vagrant::Config.run do |config|
   # an identifier, the second is the path on the guest to mount the
   # folder, and the third is the path on the host to the actual folder.
   config.vm.share_folder 'templates', '/tmp/vagrant-puppet/templates', 'puppet/templates'
-  config.vm.share_folder 'www', '/var/www/site.local', '../site', :group => "www-data", :extra => 'dmode=775'
+  config.vm.share_folder 'www', '/var/www/site.local', '../public_html', :group => "www-data", :extra => 'dmode=775'
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.

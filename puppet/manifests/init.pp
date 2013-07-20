@@ -38,7 +38,7 @@ include php
 
 # Install the site.
 apache::site { $site_domain:
-  # documentroot => "site"
+  # documentroot => "public_html"
 }
 
 
