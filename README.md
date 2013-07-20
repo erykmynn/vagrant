@@ -8,7 +8,9 @@ This is intended to be included as a submodule in another project, providing a s
 
 ### Installation instructions ###
 
-`curl https://gist.github.com/delphian/6044380/download | tar -xz --strip-components=1 && chmod u+x ./install-vagrant.sh && ./install-vagrant.sh`
+```
+curl https://gist.github.com/delphian/6044380/download | tar -xz --strip-components=1 && chmod u+x ./install-vagrant.sh && ./install-vagrant.sh
+```
 
 ### Using ###
 
