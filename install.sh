@@ -53,3 +53,9 @@ sed -i "" -e "s/site.local/$DOMAIN/g" puppet/manifests/init.pp
 vagrant destroy --force
 vagrant up
 
+# Run custom script inside the virtual machine.
+if [ -z "$SCRIPT" ]; then
+  PORT=`vagrant ssh-config | grep Port | grep -o '[0-9]\+'`
+  chmod 600 ~/.vagrant.d/insecure_private_key
+  ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.vagrant.d/insecure_private_key vagrant@localhost -p $PORT 'bash -s' < $SCRIPT
+fi
