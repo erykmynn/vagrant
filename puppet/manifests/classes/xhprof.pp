@@ -34,7 +34,7 @@ class xhprof {
   
   exec { "download-unzip":
     cwd => '/usr/src',
-    command => "/usr/bin/wget https://nodeload.github.com/facebook/xhprof/zip/master && /usr/bin/unzip master",
+    command => "/usr/bin/wget https://github.com/facebook/xhprof/archive/master.zip && /usr/bin/unzip master",
     creates => "/usr/src/xhprof-master",
     require => Package['unzip']
   }
