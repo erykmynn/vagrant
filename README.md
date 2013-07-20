@@ -21,7 +21,7 @@ mkdir public_html
 echo "<h1>Hello World</h1>" > public_html/index.html
 # Run the installation script
 cd vagrant && ./install.sh
-
+#
 ```
 
 ### Using ###
