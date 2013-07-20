@@ -6,11 +6,19 @@ This is intended to be included as a submodule in another project, providing a s
 3. If you are on windows please download and install [Cygwin](http://cygwin.com/setup.exe). See [Cygwin Setup](http://cygwin.com/cygwin-ug-net/setup-net.html#setup-packages) for help. Make sure to install ssh and git packages.
 
 ### Installation instructions
-1. Open bash and create a project directory: `mkdir mywebsite && cd mywebsite`
-2. Clone this repo: `git clone git://github.com/delphian/vagrant.git`
-3. Create the html document root `mkdir public_html`
-4. Put an example html file into the document root `echo "<h1>Hello World!</h1>" > site/index.html`
-5. Run the installation script `cd vagrant && ./install.sh`
+
+```
+# Open bash and create a project directory
+mkdir mywebsite && cd mywebsite
+# Clone this repo
+git clone git://github.com/delphian/vagrant.git
+# Create the html document root
+mkdir public_html
+# Put an example html file into the document root
+echo "<h1>Hello World</h1>" > public_html/index.html
+# Run the installation script
+cd vagrant && ./install.sh
+```
 
 ### Using ###
 
