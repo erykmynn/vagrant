@@ -1,4 +1,19 @@
-# Install local site in hosts file and run virtual machine.
+#!/bin/bash
+
+IP_ADDRESS=$1
+DOMAIN=$2
+SCRIPT=$3
+
+if [ -z "$DOMAIN" ]; then
+  echo ""
+  echo "Usage: install.sh {ip_address} {domain} [script.sh]"
+  echo "ip_address: ip address of the virtual machine."
+  echo "domain: domain name that will be used to access virtual machine (site.local)"
+  echo ""
+  exit 1
+fi
+
+# Install local site in hosts file.
 HAS_SUDO=`command -v sudo 2>/dev/null`
 
 # Locate hosts file.
@@ -15,17 +30,19 @@ fi
 echo "Hosts file found at: $FILE_HOSTS"
 
 # Check if hosts file has our site.local in it.
-HOST_ENTRY=`cat $FILE_HOSTS | grep site.local`
+HOST_ENTRY=`cat $FILE_HOSTS | grep $DOMAIN`
 if [ -z "$HOST_ENTRY" ]; then
-  echo "Adding site.local to hosts file."
+  echo "Adding $DOMAIN to hosts file."
   if [ ! -z "$HAS_SUDO" ]; then
-    sudo -- sh -c "echo '33.33.33.66 site.local' >> $FILE_HOSTS"
+    sudo -- sh -c "echo '$IP_ADDRESS $DOMAIN' >> $FILE_HOSTS"
   else
-    sh -c "echo '33.33.33.66 site.local' >> $FILE_HOSTS"
+    sh -c "echo '$IP_ADDRESS $DOMAIN' >> $FILE_HOSTS"
   fi
 else
   echo "Host entry already found: $HOST_ENTRY"
 fi
+
+# Replace constants in Vagrantfile and puppet scripts.
 
 # Build VM.
 vagrant destroy --force
