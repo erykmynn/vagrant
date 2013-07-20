@@ -8,21 +8,7 @@ This is intended to be included as a submodule in another project, providing a s
 
 ### Installation instructions ###
 
-You may copy and paste this into your terminal or execute each command yourself.
-
-```
-# Open bash and create a project directory
-mkdir mywebsite && cd mywebsite
-# Clone this repo
-git clone git://github.com/delphian/vagrant.git
-# Create the html document root
-mkdir public_html
-# Put an example html file into the document root
-echo "<h1>Hello World</h1>" > public_html/index.html
-# Run the installation script
-cd vagrant && ./install.sh
-#
-```
+`curl https://gist.github.com/delphian/6044380/download | tar -xz --strip-components=1 && chmod u+x ./install-vagrant.sh && ./install-vagrant.sh`
 
 ### Using ###
 
