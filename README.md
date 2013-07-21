@@ -24,7 +24,7 @@ curl -s https://raw.github.com/delphian/vagrant/master/scripts/bootstrap.sh | ba
 
 Installation script will:
 
- * Create a virtual box on 33.33.33.36
+ * Create a virtual machine on 33.33.33.36
  * Modify hosts file mapping site.local to 33.33.33.36
 
 Or install manually by:
