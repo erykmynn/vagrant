@@ -1,3 +1,6 @@
+Vagrant
+==============
+
 This is intended to be included as a submodule in another project, providing a
 standardized Virtual Machine for LAMP project development. The virtual machine
 shares the directory which serves the html pages (public_html) with the host
