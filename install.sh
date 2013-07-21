@@ -59,3 +59,7 @@ if [ ! -z "$SCRIPT" ]; then
   chmod 600 ~/.vagrant.d/insecure_private_key
   ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.vagrant.d/insecure_private_key vagrant@localhost -p $PORT 'bash -s' < $SCRIPT
 fi
+
+# Restore the repository to its normal state.
+git reset --hard HEAD
+
