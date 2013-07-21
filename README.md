@@ -29,9 +29,9 @@ Installation script will:
 
 Or install manually by:
 
- * `git clone --recursive `
+ * `git clone --recursive git://github.com/delphian/vagrant.git`
  * `cd vagrant`
- * `./install.sh 33.33.33.36 site.local`
+ * `./install.sh 33.33.33.36 site.local` install.sh {ip address} {domain} [script.sh to run inside vm].
 
 #### Usage ####
 
