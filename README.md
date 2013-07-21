@@ -4,7 +4,9 @@ shares the directory which serves the html pages (public_html) with the host
 system, allowing editing of the files on the host system.
 
 The shared directory `../public_html` is expected to be found (outside of this
-repository) and must be provided by the containing repository or project.
+repository) and must be provided by the containing repository or project. See
+[Vagrant Drupal 7](https://github.com/delphian/vagrant-drupal-7) for an example
+of a project making use of this vagrant submodule.
 
 #### Prerequisites ####
 
