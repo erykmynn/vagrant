@@ -16,17 +16,26 @@ of a project making use of this vagrant submodule.
 
 #### Installation ####
 
+Copy and paste this into your shell to install everything:
+
 ```
-curl https://gist.github.com/delphian/6044380/download | tar -xz --strip-components=1 \
-&& chmod u+x ./install-vagrant.sh && ./install-vagrant.sh
+curl -s https://raw.github.com/delphian/vagrant/master/scripts/bootstrap.sh | bash
 ```
 
-#### Using ####
+Installation script will:
 
-The installation script will attempt to update the hosts file so that site.local
-will resolve to 33.33.33.66 (the IP of the VM).
+ * Create a virtual box on 33.33.33.36
+ * Modify hosts file mapping site.local to 33.33.33.36
 
-Open a browser and hit the new website: http://site.local
+Or install manually by:
+
+ * `git clone --recursive `
+ * `cd vagrant`
+ * `./install.sh 33.33.33.36 site.local`
+
+#### Usage ####
+
+After installation script is finished open a browser and navigate to http://site.local
 
 #### Database management ####
 
