@@ -47,7 +47,7 @@ class drupal {
   }
   
   exec {"add-php-repo":
-    command => "/usr/bin/add-apt-repository --yes ppa:ondrej/php5",
+    command => "/usr/bin/add-apt-repository --yes ppa:ondrej/php5-oldstable",
     require => Package['python-software-properties']
   }
 
