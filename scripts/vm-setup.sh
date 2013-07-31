@@ -4,4 +4,4 @@
 
 # Copy hosts public and private keys into virtual machine.
 echo 'Copying system host keys into virtual machine'
-cp -r ~/.ssh/host ~/.ssh
+cp -r ~/.ssh/host/* ~/.ssh
