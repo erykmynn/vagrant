@@ -1,3 +1,6 @@
+Vagrant
+==============
+
 This is intended to be included as a submodule in another project, providing a
 standardized Virtual Machine for LAMP project development. The virtual machine
 shares the directory which serves the html pages (public_html) with the host
@@ -16,17 +19,30 @@ of a project making use of this vagrant submodule.
 
 #### Installation ####
 
+Copy and paste this into your shell to install everything:
+
 ```
-curl https://gist.github.com/delphian/6044380/download | tar -xz --strip-components=1 \
-&& chmod u+x ./install-vagrant.sh && ./install-vagrant.sh
+curl -s https://raw.github.com/delphian/vagrant/master/scripts/bootstrap.sh | bash
 ```
 
-#### Using ####
+Installation script will:
 
-The installation script will attempt to update the hosts file so that site.local
-will resolve to 33.33.33.66 (the IP of the VM).
+ * Create a virtual machine on 33.33.33.36
+ * Modify hosts file mapping site.local to 33.33.33.36
 
-Open a browser and hit the new website: http://site.local
+Or install manually by:
+
+```
+git clone --recursive git://github.com/delphian/vagrant.git
+cd vagrant
+./install.sh 33.33.33.36 site.local
+```
+
+install.sh {ip address} {domain} [host-script.sh to run inside vm].
+
+#### Usage ####
+
+After installation script is finished open a browser and navigate to http://site.local
 
 #### Database management ####
 
