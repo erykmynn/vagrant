@@ -47,7 +47,7 @@ class drupal {
   }
   
   exec {"add-php-repo":
-    command => "/usr/bin/add-apt-repository --yes ppa:chris-lea/php5.3.6",
+    command => "/usr/bin/add-apt-repository --yes ppa:bjori/php5",
     require => Package['python-software-properties']
   }
 
