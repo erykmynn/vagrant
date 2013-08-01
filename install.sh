@@ -3,7 +3,7 @@
 IP_ADDRESS=$1
 DOMAIN=$2
 DOCROOT=$3
-SCRIPT=$3
+SCRIPT=$4
 
 if [ -z "$DOCROOT" ]; then
   echo ""
