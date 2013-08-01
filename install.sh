@@ -2,13 +2,15 @@
 
 IP_ADDRESS=$1
 DOMAIN=$2
+DOCROOT=$3
 SCRIPT=$3
 
-if [ -z "$DOMAIN" ]; then
+if [ -z "$DOCROOT" ]; then
   echo ""
-  echo "Usage: install.sh {ip_address} {domain} [script.sh]"
+  echo "Usage: install.sh {ip_address} {domain} {/full/path/docroot} [script.sh]"
   echo "ip_address: ip address of the virtual machine."
   echo "domain: domain name that will be used to access virtual machine (site.local)"
+  echo "docroot: full path to the document root inside the virtual machine"
   echo ""
   exit 1
 fi
@@ -46,7 +48,7 @@ fi
 git checkout Vagrantfile
 git checkout puppet/manifests/init.pp
 sed -i "" -e "s/33.33.33.66/$IP_ADDRESS/g" Vagrantfile
-sed -i "" -e "s/site.local/$DOMAIN/g" Vagrantfile
+sed -i "" -e "s/site.local/$DOCROOT/g" Vagrantfile
 sed -i "" -e "s/site.local/$DOMAIN/g" puppet/manifests/init.pp
 
 # Build VM.
