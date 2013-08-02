@@ -54,9 +54,9 @@ git checkout Vagrantfile
 git checkout puppet/manifests/init.pp
 sed -i "" -e "s#33.33.33.66#$IP_ADDRESS#g" Vagrantfile
 sed -i "" -e "s#site.local#$DOMAIN#g" Vagrantfile
+sed -i "" -e "s#\"--memory\", \"256\"#\"--memory\", \"$RAM\"#" Vagrantfile
 sed -i "" -e "s#site.local#$DOMAIN#g" puppet/manifests/init.pp
 sed -i "" -e "s#documentroot => \"\"#documentroot => \"$DOCROOT\"#g" puppet/manifests/init.pp
-sed -i "" -e "s#\"--memory\", \"256\"#\"--memory\", \"$RAM\"#"
 
 # Build VM.
 vagrant destroy --force
