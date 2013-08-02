@@ -17,6 +17,9 @@ if [ -z "$RAM" ]; then
   exit 1
 fi
 
+# Move back into vagrant base directory.
+cd ..
+
 # Install local site in hosts file.
 HAS_SUDO=`command -v sudo 2>/dev/null`
 
