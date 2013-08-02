@@ -74,3 +74,7 @@ fi
 # Restore the repository to its normal state.
 git reset --hard HEAD
 
+# Launch chrome if it exists on mac.
+if [ -f /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome ]; then
+  open -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome http://$DOMAIN
+fi
