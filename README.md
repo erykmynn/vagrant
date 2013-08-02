@@ -41,6 +41,7 @@ cd vagrant
 #### Usage ####
 
 After installation script is finished open a browser and navigate to http://site.local
+(If Chrome is present on Mac OSX the script will attempt to automtically open the browser)
 
 #### Database management ####
 
