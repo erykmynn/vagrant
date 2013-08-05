@@ -38,7 +38,7 @@ class pear {
   
   # install drush
   exec { 'install-drush':
-    command => "/usr/bin/pear install -a -f drush/drush",
+    command => "/usr/bin/pear install -a -f drush/drush-6.0.0",
     require => [
       Exec["pear-channel-discover"],
       Exec["install-console-table"]
