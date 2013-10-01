@@ -1,3 +1,14 @@
 CLICOLOR=1
 LSCOLORS=GxFxCxDxBxegedabagaced
 PS1="\[$(tput bold)\]\[$(tput setab 2)\]\u@\h:\w $ "
+
+alias ll='ls -lsaFhlG'
+alias l='ls -la'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias home='cd ~'
+
+export PATH="/sbin:/usr/sbin:${PATH}"
+alias resetmemcche='/etc/init.d/memcached stop;/etc/init.d/memcached start;'
+alias resetall='/etc/init.d/httpd restart; /etc/init.d/mysqld restart; /etc/init.d/memcached stop;/etc/init.d/memcached start;'
+
