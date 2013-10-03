@@ -26,6 +26,7 @@ package { 'git-core': ensure => present }
 package { 'rubygems': ensure => present }
 package { 'unzip': ensure => present }
 package { 'curl' : ensure => present }
+package { 'php5-memcached' : ensure => present }
 
 include apache
 include mysql::server
@@ -35,6 +36,8 @@ include xdebug
 include xhprof
 include postfix
 include php
+include libssh2
+include memcached
 
 # Install the site.
 apache::site { $site_domain:

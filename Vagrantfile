@@ -39,6 +39,7 @@ Vagrant::Config.run do |config|
   config.vm.share_folder 'hostkeys', '/home/vagrant/.ssh/host', '~/.ssh'
   config.vm.share_folder 'www', '/var/www/site.local', '../public_html', :group => "www-data", :extra => 'dmode=777,fmode=777'
   config.vm.share_folder 'www', '/var/www/local.drupal.org', '../public_html', :group => "www-data", :extra => 'dmode=777,fmode=777'
+  config.vm.share_folder 'www', '/var/www/html', '/Volumes/Work/xMarcello/Development:Consulting', :group => "www-data", :extra => 'dmode=777,fmode=777'
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.

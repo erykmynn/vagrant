@@ -1,4 +1,4 @@
-class packages::libssh2 inherits packages {
+class libssh2 {
 
     package { "libssh2":
         ensure => installed,
