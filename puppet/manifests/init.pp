@@ -27,6 +27,7 @@ package { 'rubygems': ensure => present }
 package { 'unzip': ensure => present }
 package { 'curl' : ensure => present }
 package { 'php5-memcached' : ensure => present }
+package { 'php-apc' : ensure => present }
 
 include apache
 include mysql::server
