@@ -11,9 +11,9 @@ mkdir public_html
 echo "<h1>Hello World</h1>" > public_html/index.html
 echo ""
 echo "Bootstrap is installing virtual machine with vagrant..."
-echo "Cloning repository https://github.com/delphian/vagrant..."
+echo "Cloning repository https://github.com/marcelovani/vagrant..."
 echo ""
-git clone --recursive git://github.com/delphian/vagrant.git
+git clone --recursive git://github.com/marcelovani/vagrant.git
 cd vagrant/scripts
 ./install.sh 33.33.33.36 site.local /var/www/site.local 256
 echo "Bootstrap has finished installation."
