@@ -35,11 +35,12 @@ Vagrant::Config.run do |config|
   # Share an additional folder to the guest VM. The first argument is
   # an identifier, the second is the path on the guest to mount the
   # folder, and the third is the path on the host to the actual folder.
+
   config.vm.share_folder 'templates', '/tmp/vagrant-puppet/templates', 'puppet/templates'
   config.vm.share_folder 'hostkeys', '/home/vagrant/.ssh/host', '~/.ssh'
-  config.vm.share_folder 'www', '/var/www/site.local', '../public_html', :group => "www-data", :extra => 'dmode=777,fmode=777'
-  config.vm.share_folder 'www', '/var/www/local.drupal.org', '../public_html', :group => "www-data", :extra => 'dmode=777,fmode=777'
-  config.vm.share_folder 'www', '/vagrant/Websites', '/Volumes/Work/xMarcello/Development:Consulting/Websites', :group => "www-data", :extra => 'dmode=777,fmode=777'
+  config.vm.share_folder 'www', '/var/www/site.local', '../public_html', :group => "www-data", :owner => 'vagrant'
+  config.vm.share_folder 'www', '/var/www/local.drupal.org', '../public_html', :group => "www-data", :owner => 'vagrant'
+  config.vm.share_folder 'www', '/vagrant/Websites', '/Volumes/Work/xMarcello/Development:Consulting/Websites', :group => "www-data", :owner => 'vagrant'
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.
